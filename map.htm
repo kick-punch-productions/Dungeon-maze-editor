@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<style>
+		.arial {font-family: arial}
+		</style>
+	</head>
+	<body>
+		<h3 class="arial">A JS dungeon-maze-editor that generates coordinate arrays for the walls or floors or both. Left-click or drag for floor. Shift-left-click for wall.</h3>
+		<input type="text" id="setWidth" value="20" /><input type="button" value="set width" onclick="setWidth()" /><span class="arial">*10 pixels</span><br />
+		<input type="text" id="setHeight" value="20" /><input type="button" value="set height" onclick="setHeight()" /><span class="arial">*10 pixels</span><br />
+		<canvas id="map" width="200" height="200"></canvas>
+		<script src="grid.js"></script>
+		<br />
+		<input type="button" value="Floor array" onclick="getFloor()" /><span class="arial"> [[x<sub>1</sub>,y<sub>1</sub>],[x<sub>2</sub>,y<sub>2</sub>], ... [x<sub>n</sub>,y<sub>n</sub>]]</span>
+		<br />
+		<input type="button" value="Wall array" onclick="getWall()" /><span class="arial"> [[x<sub>1</sub>,y<sub>1</sub>],[x<sub>2</sub>,y<sub>2</sub>], ... [x<sub>n</sub>,y<sub>n</sub>]]</span>
+		<br />
+		<input type="button" value="Maze/dungeon array" onclick="getDungeon()" /><span class="arial"> [x<sub>n</sub>,y<sub>n</sub>,0] or [x<sub>n</sub>,y<sub>n</sub>,1] where 0 = floor and 1 = wall</span>
+	</body>
+</html>
